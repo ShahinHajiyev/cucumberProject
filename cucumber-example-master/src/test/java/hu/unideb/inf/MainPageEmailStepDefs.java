@@ -22,12 +22,17 @@ public class MainPageEmailStepDefs extends AbstractStepDefs {
     }
 
     @Then("the {string} error message shown")
-    public void aErrorMessageIsShown(String arg0) {
+    public void aErrorMessageIsShown(String msg) {
         Optional<String> errorMessage = homePage.getEmailError();
         if (errorMessage.isPresent()) {
-            Assert.assertEquals(arg0, errorMessage.get());
+            Assert.assertEquals(msg, errorMessage.get());
         } else {
             fail();
         }
+    }
+
+    @Given("the {string} email address filled with {string}")
+    public void theAreaEmailAddressFilledWithParameter(String field, String parameter) {
+        homePage.fillField(field, parameter);
     }
 }

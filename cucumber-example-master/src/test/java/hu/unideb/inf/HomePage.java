@@ -25,7 +25,7 @@ public class HomePage {
 
     private static final By LOGIN_ERROR = By.xpath("//*[@id=\"center_column\"]/div[1]/ol/li");
     private static final By CONTACT_ERROR = By.cssSelector("#center_column > div > ol > li");
-    private static final By EMAIL_ERROR = By.xpath("//p[contains(text(),'Newsletter : Invalid email address.')]");
+    private static final By EMAIL_ERROR = By.xpath("/html[1]/body[1]/div[1]/div[2]/div[1]/p[1]");
     private static final By SEARCH_ERROR = By.cssSelector("body.search.hide-right-column.lang_en:nth-child(2) div.columns-container div.container div.row:nth-child(3) div.center_column.col-xs-12.col-sm-9 > p.alert.alert-warning");
     private static final By CART_ERROR = By.xpath("//p[contains(text(),'Your shopping cart is empty.')]");
     private static final By ADD_TO_CART = By.xpath("//body[1]/div[1]/div[1]/header[1]/div[3]/div[1]/div[1]/div[4]/div[1]/div[2]/h2[1]");
@@ -53,14 +53,14 @@ public class HomePage {
         actions.build().perform();
     }
 
-/*
+
     public static void switchTabs(WebDriver driver, int expectedWindowsCount,int SwitchtoWindow) throws Exception {
         (new WebDriverWait(driver, 30)).until(ExpectedConditions.numberOfWindowsToBe(expectedWindowsCount));
         ArrayList<String> tabs2 = new ArrayList<String>(driver.getWindowHandles());
         driver.switchTo().window(tabs2.get(SwitchtoWindow));
     }
 
- */
+
 
     @FindBy(xpath = "//body[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/form[1]/div[4]/button[1]/span[1]")
     private WebElement registerButton;
