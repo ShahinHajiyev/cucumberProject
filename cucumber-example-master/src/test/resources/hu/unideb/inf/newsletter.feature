@@ -11,6 +11,6 @@ Feature: Testing the Main Page email
       | area                 | parameter             | message |
       |  newsletter-input    |  some                 | Newsletter : Invalid email address.        |
       |  newsletter-input    |  some@mail.ru         | Newsletter : This email address is already registered.|
-      |  newsletter-input    |  someonee@mail.ru      | Newsletter : You have successfully subscribed to this newsletter.                                                      |
+      |  newsletter-input    |  someoneasdasdfewqqa@mail.ru      | Newsletter : You have successfully subscribed to this newsletter.                                                      |
 
 

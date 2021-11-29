@@ -11,7 +11,7 @@ Feature: Testing the ContactUs page
     Then the '<msg>' error messages are shown
     Examples:
       | field |  area            |  parameter          |param       | msg                                            |
-      | email |  message         | something@mail.ru   | something  |Please select a subject from the list provided. |
+      | email |  message         |something@mail.ru    | something  |Please select a subject from the list provided. |
       | email |  message         |invalid.email.com    |            | Invalid email address.                         |
       | email |  message         |valid@email.com      |            |The message cannot be blank.                    |
 

@@ -48,4 +48,8 @@ public class LoginStepDefs extends AbstractStepDefs {
         }
     }
 
+    @And("{string} is filled with {string}")
+    public void placeIsFilledWithParameter(String field, String parameter) {
+        homePage.fillField(field, parameter);
+    }
 }

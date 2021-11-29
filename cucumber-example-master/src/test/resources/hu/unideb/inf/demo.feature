@@ -6,11 +6,12 @@ Feature: YourLogo sign in page test
 
     Scenario Outline:
       Given the '<field>' is filled with '<parameter>'
+      And  '<place>' is filled with '<param>'
       When the Sign In button is clicked
       Then the '<msg>' error message is shown
       Examples:
-        | field | parameter         | msg                        |
-        | email |                   | An email address required. |
-        | email | invalid.email.com | Invalid email address.     |
-        | email | valid@email.com   | Password is required.      |
-
+        | field | parameter         |place        |param| msg                        |
+        | email |                   | passwd      |     |An email address required. |
+        | email | invalid.email.com | passwd      |     |Invalid email address.     |
+        | email | valid@email.com   | passwd      |     |Password is required.      |
+        |  email     |  valid@email.com                 | passwd             |123123123     |  Authentication failed.             |

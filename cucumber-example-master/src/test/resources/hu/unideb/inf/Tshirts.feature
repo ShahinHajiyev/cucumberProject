@@ -8,3 +8,5 @@ Feature: T`shirts test
       And list button is clicked
       When ADD to cart button is clicked
       Then "" error message is shown
+
+
