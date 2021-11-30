@@ -10,7 +10,7 @@ Feature: Testing the Main Page email
     Examples:
       | area                 | parameter             | message |
       |  newsletter-input    |  some                 | Newsletter : Invalid email address.        |
-      |  newsletter-input    |  some@mail.ru         | Newsletter : This email address is already registered.|
-      |  newsletter-input    |  someoneasdasdfewqqa@mail.ru      | Newsletter : You have successfully subscribed to this newsletter.                                                      |
+      |  newsletter-input    |  hshahin.t401@code.edu.az         | Newsletter : This email address is already registered.|
+      |  newsletter-input    |  tamm@gmail.com      | Newsletter : You have successfully subscribed to this newsletter.                                                      |
 
 
